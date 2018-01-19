@@ -1,15 +1,29 @@
-# extractLinksFromMd
+# PROYECTO EXTRACT LINKS FROM MD
 
-* **Track:** _Common Core_
-* **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
-* **Unidad:** _Producto final_
+extractLinksFromMd es un módulo de Node.js que a partir de un string en formato Markdown extrae todos los links encontrados.
 
-***
+### El Reto
 
 Implementar un módulo de Node.js que reciba un string (en formato Markdown) y
 extraiga todos los links encontrados. La implementación debe ser una función que
 recibe un string y devuelve un arreglo de objetos como se muestra en el este
-ejemplo:
+
+### Metodología de trabajo 
+
++ Metodología ágil
++ Slack
++ Trello
+
+### Dependencias NPM
+
++ Desarrollo:
+  - NodeJS
+  - ESlint
+
++ Producción:
+  - Bootstrap
+
++ ejemplo:
 
 ```js
 const extractLinksFromMd = require('extract-links-from-md');

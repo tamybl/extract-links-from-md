@@ -15,10 +15,13 @@
     "getlinks",
     "markdown"
   ],
-  "author": "Tamara Bravo, Camila Cornejos",
+  "author": "Tamara Bravo <tamara.bravo.l@gmail.com>, Camila Cornejos",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tamybl/extract-links-from-md/issues"
   },
-  "homepage": "https://github.com/tamybl/extract-links-from-md#readme"
+  "homepage": "https://github.com/tamybl/extract-links-from-md#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
 }

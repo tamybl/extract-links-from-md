@@ -4,7 +4,7 @@
   "description": "modulo de Node.js para extraer links de un string en formato markdown",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "getlinks",
     "markdown"
   ],
-  "author": "Tamara Bravo <tamara.bravo.l@gmail.com>, Camila Cornejos",
+  "author": "Tamara Bravo <tamara.bravo.l@gmail.com>, Camila Cornejos <ccornejoss@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tamybl/extract-links-from-md/issues"
@@ -23,5 +23,9 @@
   "homepage": "https://github.com/tamybl/extract-links-from-md#readme",
   "dependencies": {
     "bootstrap": "^3.3.7"
+  },
+  "devDependencies": {
+    "eslint": "^4.16.0",
+    "mocha": "^5.0.0"
   }
 }

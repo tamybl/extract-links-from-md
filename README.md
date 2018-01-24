@@ -1,52 +1,44 @@
-# PROYECTO EXTRACT LINKS FROM MD
+# PROYECTO EXTRACT URLS
 
-extractLinksFromMd es un módulo de Node.js que a partir de un string en formato Markdown extrae todos los links encontrados.
+extractURLs es un módulo de Node.js que hace más fácil poder encontrar todas las url de un texto a partir de un string en formato Markdown.
 
-### El Reto
-
-Implementar un módulo de Node.js que reciba un string (en formato Markdown) y
-extraiga todos los links encontrados. La implementación debe ser una función que
-recibe un string y devuelve un arreglo de objetos como se muestra en el este
-
-### Metodología de trabajo 
-
-+ Metodología ágil
-+ Slack
-+ Trello
+Este módulo retornará los links encontrados en un arreglo de objetos.
 
 ### Dependencias NPM
 
 + Desarrollo:
   - NodeJS
   - ESlint
+  - Mocha
+  - Chai
 
 + Producción:
   - Bootstrap
 
-+ ejemplo:
+### Instalación
 
-```js
-const extractLinksFromMd = require('extract-links-from-md');
-const str = `# Lorem ipsum
+  `npm install --save extractURLs`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut [labore](https://en.wiktionary.org/wiki/labore) et
-[dolore](https://en.wiktionary.org/wiki/dolore) magna aliqua. Ut enim ad minim
-veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat.
+### Uso
 
-[foo](http://foo.com)
+/require(extractURLs)/
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.`;
+1. Ve a la terminal en la carpeta raíz de tu proyecto
 
-const links = extractLinksFromMd(str);
+2. Ejecuta:
+  ` node ./index.js`
 
-console.log(links);
-// [
-//   { href: 'https://en.wiktionary.org/wiki/labore', text: 'labore' },
-//   { href: 'https://en.wiktionary.org/wiki/dolore', text: 'dolore' },
-//   { href: 'http://foo.com', text: 'foo' },
-// ]
-```
+3. Ingresa un texto en formato **Markdown**: _tu-texto_
+  - Ejemplo: ` # Lorem ipsum`
+
+    ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut [labore](https://en.wiktionary.org/wiki/labore) et [dolore](https://en.wiktionary.org/wiki/dolore) magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. [foo](http://foo.com). Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.; ` 
+
+4. Obtendrás un arreglo de objetos con todas las urls encontradas.
+  - Ejemplo:
+  ` [
+     { href: 'https://en.wiktionary.org/wiki/labore', text: 'labore' },
+     { href: 'https://en.wiktionary.org/wiki/dolore', text: 'dolore' },
+     { href: 'http://foo.com', text: 'foo' },
+    ] `
+
+

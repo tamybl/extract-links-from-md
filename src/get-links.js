@@ -38,5 +38,5 @@ getMdLinks.matches = function(str) {
 }
 
 
-module.exports = getMdLinks
+module.exports = getMdLinks;
 

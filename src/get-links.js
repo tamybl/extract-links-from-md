@@ -23,6 +23,9 @@ getMdLinks.url = function (link) {
 getMdLinks.text = function (txt) {
   var text = txt.match(/\[(.*?)\]/g).toString();
   var textResult = text.substring(1,text.length-1);
+  if (textResult === '') {
+    return 'No results';
+  }
   return textResult;
 }
 

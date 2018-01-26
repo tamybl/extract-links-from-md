@@ -4,9 +4,9 @@ var rl = readline.createInterface(process.stdin, process.stdout);
 rl.question('Ingresa un texto en formato Markdown: ', inputText )
 
 function inputText (text) {
-  var geturls = require('./index.js')
+  var geturls = require('./index.js');
   //console.log(text)
-  console.log(geturls(text))
+  console.log(geturls.matches(text))
   }
 
 

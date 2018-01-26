@@ -7,8 +7,11 @@ const getMdLinks = {};
 */
 getMdLinks.MdLink = function(str) {
   var regex = /\[(.*?)\](([^\s]+))/gi;
-  let matchesArr = str.match(regex);
-  return matchesArr;
+  var matchesArr = str.match(regex);
+  var matchesArrFilter = matchesArr.filter(function (element) {
+    return element !== '[]()';
+  })
+  return matchesArrFilter;
 }
 
 getMdLinks.url = function (link) {

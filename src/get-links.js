@@ -5,7 +5,7 @@ const getMdLinks = {};
 * Funcion que a partir de una cadena de texto en formato Mardkdown devuelve
 * todo elemento de la forma []()
 */
-getMdLinks.MdLink = function(str) {
+getMdLinks.mdLink = function(str) {
   var regex = /\[(.*?)\](([^\s]+))/gi;
   var matchesArr = str.match(regex);
   var matchesArrFilter = matchesArr.filter(function (element) {
@@ -33,7 +33,7 @@ getMdLinks.text = function (txt) {
 * Funcion que devuelve un arreglo de objetos con el enlace y su texto.
 */
 getMdLinks.matches = function(str) { 
-  var matchesArr = getMdLinks.MdLink(str);
+  var matchesArr = getMdLinks.mdLink(str);
   var arrResult = matchesArr.map(function (element) {
     var url = getMdLinks.url(element); 
     var text = getMdLinks.text(element);

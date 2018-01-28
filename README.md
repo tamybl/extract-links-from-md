@@ -43,7 +43,7 @@ Este módulo retornará los links encontrados en un arreglo de objetos.
 
 #### Comprobar texto en fichero.js
 
-1. Crear fichero en tu proyecto (ejemplo: fichero.js)
+1. Crear fichero en tu proyecto (ejemplo: **fichero.js**)
 
 2. Llamar al módulo con la funcion require()
   `const extractUrls = require(./index.js);`
@@ -55,26 +55,31 @@ El modulo integra algunas configuraciones adicionales que permiten tener otros r
 - Tipo: Array (Arreglo de Objetos)
 
 - Ejemplo: 
-  `const str = '# Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut [labore](https://en.wiktionary.org/wiki/labore) et [dolore](https://en.wiktionary.org/wiki/dolore) magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. [foo](http://foo.com). Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'; `
+  ```js 
+  const str = '# Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut [labore](https://en.wiktionary.org/wiki/labore) et [dolore](https://en.wiktionary.org/wiki/dolore) magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. [foo](http://foo.com). Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'; 
+  ```
 
 #### Opción 1: extractUrls.MdLink()
 - Retorna solo los enlaces escritos de las forma `[texto descriptivo](http://www.enlace.com)` 
-  `console.log(extractUrls.MdLink(str));
+  ```js 
+  console.log(extractUrls.MdLink(str));
   // => [ 
     { href: 'https://en.wiktionary.org/wiki/labore', text: 'labore' },
     { href: 'https://en.wiktionary.org/wiki/dolore', text: 'dolore' },
     { href: 'http://foo.com', text: 'foo' },
-    ] `
+    ] ```
 
-#### Opción 2: extractUrls.url(str)
+#### Opción 2: extractUrls.url()
 - Retorna solo los enlaces independiente de su estructura: 
-  `console.log(extractUrls.url(str));
-  // => [ 'https://en.wiktionary.org/wiki/labore', 'https://en.wiktionary.org/wiki/dolore', 'http://foo.com' ] `
+  ```js 
+  console.log(extractUrls.url(str));
+  // => [ 'https://en.wiktionary.org/wiki/labore', 'https://en.wiktionary.org/wiki/dolore', 'http://foo.com' ] ```
 
-#### Opción 3: extractUrls.text(str)
+#### Opción 3: extractUrls.text()
 - Retorna solo los enlaces escritos de la forma `[texto descriptivo]`: 
-  `console.log(extractUrls.text(str));
-  // => [ 'labore', 'dolore', 'foo' ] `
+  ```js 
+  console.log(extractUrls.text(str));
+  // => [ 'labore', 'dolore', 'foo' ] ```
 
 
   

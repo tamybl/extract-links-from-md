@@ -33,17 +33,20 @@ getMdLinks.text = function (txt) {
 * Funcion que devuelve un arreglo de objetos con el enlace y su texto.
 */
 getMdLinks.matches = function(str) { 
-  if(str === '' || str === null || str.length === undefined || matchesArr === undefined) {
+  if(str === '' || str === null || str.length === undefined) {
     return 'No Results';
   }
   var matchesArr = getMdLinks.mdLink(str);
-  var arrResult = matchesArr.map(function (element) {
+  if (matchesArr !== '' || matchesArr !== null || matchesArr !== undefined) {
+    var arrResult = matchesArr.map(function (element) {
     var url = getMdLinks.url(element); 
     var text = getMdLinks.text(element);
     var obj = { href: url, text: text }
     return obj;
   });
   return arrResult;
+  }
+  
 }
 
 module.exports = getMdLinks;

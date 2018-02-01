@@ -1,5 +1,5 @@
 {
-  "name": "extract-links-from-md",
+  "name": "extract-url",
   "version": "1.0.0",
   "description": "modulo de Node.js para extraer links de un string en formato markdown",
   "main": "index.js",
@@ -13,7 +13,9 @@
   "keywords": [
     "url",
     "getlinks",
-    "markdown"
+    "markdown",
+    "links",
+    "md"
   ],
   "author": "Tamara Bravo <tamara.bravo.l@gmail.com>, Camila Cornejos <ccornejoss@gmail.com>",
   "license": "ISC",

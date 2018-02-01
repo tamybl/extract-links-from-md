@@ -8,9 +8,9 @@ const getMdLinks = {};
 getMdLinks.mdLink = function(str) {
   var regex = /\[(.*?)\](([^\s]+))/gi;
   var matchesArr = str.match(regex);
-  var matchesArrFilter = matchesArr.filter(function (element) {
+    var matchesArrFilter = matchesArr.filter(function (element) {
     return element !== '[]()';
-  })
+    });
   return matchesArrFilter;
 }
 
@@ -33,6 +33,9 @@ getMdLinks.text = function (txt) {
 * Funcion que devuelve un arreglo de objetos con el enlace y su texto.
 */
 getMdLinks.matches = function(str) { 
+  if(str === '' || str === null || str.length === undefined || matchesArr === undefined) {
+    return 'No Results';
+  }
   var matchesArr = getMdLinks.mdLink(str);
   var arrResult = matchesArr.map(function (element) {
     var url = getMdLinks.url(element); 
@@ -42,7 +45,6 @@ getMdLinks.matches = function(str) {
   });
   return arrResult;
 }
-
 
 module.exports = getMdLinks;
 

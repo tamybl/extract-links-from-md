@@ -83,7 +83,7 @@ El modulo integra algunas configuraciones adicionales que permiten tener otros r
 - Retorna todo el contenido escrito de la forma `[texto descriptivo](otro texto)`, independiente de su contenido 
   ```js 
   console.log(extractUrls.mdLink(str));
-  // => ['[labore](https://en.wiktionary.org/wiki/labore)',  '[dolore](https://en.wiktionary.org/wiki/dolore)', '[foo](http://foo.com)], [Officiis](nisi veniam)' ```
+  // => ['[labore](https://en.wiktionary.org/wiki/labore)',  '[dolore](https://en.wiktionary.org/wiki/dolore)', '[foo](http://foo.com)], [Officiis](nisi veniam)'] ```
 
   ## Implementar en Sitio Web
 

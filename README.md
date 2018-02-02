@@ -19,8 +19,7 @@ Este módulo retornará los links encontrados en un arreglo de objetos.
 
 ### Modo de Uso
 
-#### Comprobar texto en la Consola
-
+#### Comprobar texto en la Consola con readline
 
 1. Ve a la terminal en la carpeta raíz de tu proyecto
 
@@ -40,7 +39,7 @@ Este módulo retornará los links encontrados en un arreglo de objetos.
      { href: 'http://foo.com', text: 'foo' },
     ] `
 
-#### Comprobar texto en fichero.js en NODEJS
+## Comprobar texto en fichero.js en NODEJS
 
 1. Crear fichero en tu proyecto (ejemplo: **fichero.js**)
 
@@ -85,3 +84,20 @@ El modulo integra algunas configuraciones adicionales que permiten tener otros r
   ```js 
   console.log(extractUrls.mdLink(str));
   // => ['[labore](https://en.wiktionary.org/wiki/labore)',  '[dolore](https://en.wiktionary.org/wiki/dolore)', '[foo](http://foo.com)], [Officiis](nisi veniam)' ```
+
+  ## Implementar en Sitio Web
+
+  Para utilizar la librería en un proyecto web, debes posicionarte en la carpeta e instalar con el comando: 
+  `npm install --save extract-url`
+
+  O puedes linkear el CDN al index.html del proyecto.
+
+  `https://raw.githubusercontent.com/tamybl/extract-links-from-md/dev/src/get-links.js`
+
+  - En el fichero js del proyecto debes almacenar el texto en una variable y para mostrarlo en el html primero se debe hacer el procesamiento, para esto se llama la funcion de la forma
+
+  `js 
+  var str = document.getElementById('#textarea').value;
+  var extractResult = getMdLinks.matches(str);
+  document.getElementById('#display-result').innerHTML = JSON.stringify(extracResult);`
+

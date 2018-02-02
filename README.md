@@ -61,7 +61,7 @@ El modulo integra algunas configuraciones adicionales que permiten tener otros r
 #### Opción 1 (Principal): extractUrls.matches()
 - Retorna solo los enlaces válidos escritos de las forma `[texto descriptivo](http://www.enlace.com)` 
   ```js 
-  console.log(extractUrls.MdLink(str));
+  console.log(extractUrls.matches(str));
   // => [ 
     { href: 'https://en.wiktionary.org/wiki/labore', text: 'labore' },
     { href: 'https://en.wiktionary.org/wiki/dolore', text: 'dolore' },
